@@ -43,6 +43,10 @@ jQuery(function($) {
             success: function(data, textStatus, jqXHR) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
+		    if (!data[i].city) {
+		        data[i].city = "Online";
+                        data[i].start_date = "";
+		    }
                     html += "<option value=\"" +
                         data[i].id + "\">" + data[i].city +
                         " " + data[i].start_date + " #" +
