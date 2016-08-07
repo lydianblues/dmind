@@ -60,7 +60,7 @@ if (is_user_logged_in()) {
   $ng_login_state = "no";
 }
 ?>
-   <div id="login-status" data-login="<?php echo $ng_login_state; ?>"></div>
+   <div id="login-status" style="display:none;" data-login="<?php echo $ng_login_state; ?>"></div>
 <?php
 
 Mk_Static_Files::addAssets('mk_button');
