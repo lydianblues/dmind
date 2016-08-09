@@ -11,13 +11,18 @@ jQuery(function($) {
 
         var API_TOKEN = "LwveqfAx78GuYOQPhDH4WQ==";
 
-        var testing = false;
+        var development = false;
+        var threnody = false;
         var registrar = "";
 
-        if (testing) {
-            registrar = "http://localhost:3000/";
+        if (threnody) {
+            if (development) {
+                registrar = "http://localhost:3000/";
+            } else {
+                registrar = "http://registrar.thirdmode.com/";
+	    }
         } else {
-            registrar = "https://registrar.niroga.org/";
+	    registrar = "https://registrar.niroga.org/";
         }
 
         return {
